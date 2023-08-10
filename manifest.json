@@ -15,4 +15,10 @@
       "js": ["increaser.js"]
     }
   ]
+  
+   "browser_specific_settings": {
+    "gecko": {
+      "id": "myemail@gmail.com"
+    }
+  }
 }
