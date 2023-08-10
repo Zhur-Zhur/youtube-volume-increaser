@@ -49,7 +49,6 @@ function add_increaser(){
 			});
 			
 			slider_text.addEventListener("mousedown", function(e){
-				console.log(e.which);
 				if (e.which == 1){
 					e.target.innerHTML = "1.0";
 					gainNode.gain.value = 1.0;
