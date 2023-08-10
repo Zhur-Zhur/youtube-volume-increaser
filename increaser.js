@@ -1,4 +1,5 @@
 function add_increaser(){
+
 	var video_parent = document.querySelector("div.ytp-left-controls");
 	if(video_parent == null){
 		window.addEventListener('yt-navigate-start', function(){
@@ -35,6 +36,7 @@ function add_increaser(){
 			slider_text.style.padding = "3px";
 			slider_text.style.borderRadius = "5px";
 			slider_text.style.color = "#E5E5E5";
+			slider_text.style.cursor = "pointer"; 
 
 			slider_text.addEventListener("mouseover", function(e){
 				slider_text.borderColor = "white";
@@ -47,13 +49,16 @@ function add_increaser(){
 			});
 			
 			slider_text.addEventListener("mousedown", function(e){
-				if (event.which == 1) e.target.innerHTML = "1.0";
-				gainNode.gain.value = 1.0;
+				console.log(e.which);
+				if (e.which == 1){
+					e.target.innerHTML = "1.0";
+					gainNode.gain.value = 1.0;
+				}
 			});
 
 			slider_text.addEventListener("wheel", function(e){
 				e.preventDefault();
-				var new_val = Math.max(0.0, parseFloat(e.target.innerHTML) + Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)))/2);
+				var new_val = Math.max(0.0, parseFloat(e.target.innerHTML) + Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)))*0.5);
 				e.target.innerHTML = new_val.toFixed(1);
 				gainNode.gain.value = new_val;
 			});
