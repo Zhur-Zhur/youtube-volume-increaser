@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Youtube Increaser</title>
+	<style>
+		.o_title {
+			font-size: 1.75em;
+		}
+		.o_name {
+			font-size: 1.25em;
+		}
+		input {
+			text-align: center;
+			font-size: 1.25em;
+		}
+		.spacer {
+			height: 0.5em;
+		}
+		#save {
+			display: block;
+			width: 100%;
+			font-size: 1.25em;
+		}
+		#status{
+			text-align: center;
+			height: 1.25em;
+			font-size: 1.25em;
+		}
+		
+		body{
+			background-color: white;
+			color: #23222B;
+		}
+		
+		@media (prefers-color-scheme: dark){
+			body{
+				background-color: #23222B;
+				color: #EEEEEE;
+			}
+		}
+	</style>
+  </head>
+  <body>
+		<table>
+			<thead>
+				<th colspan="2">
+					<span class="o_title">Youtube Increaser</span>
+				</th>
+			</thead>
+			<tbody>
+				<tr class="spacer"><td></td></tr>
+				<tr>
+					<td>
+						<span class="o_name">Increase Keybind </span>
+					</td>
+					<td><input id="inc_key" type="text" maxlength="1"></td>
+				</tr>
+				<tr>
+					<td>
+						<span class="o_name">Decrease Keybind </span>
+					</td>
+					<td><input id="dec_key" type="text" maxlength="1"></td>
+				</tr>
+				<tr>
+					<td>
+						<span class="o_name">Step Value </span>
+					</td>
+					<td><input id="stp_val" type="text"></td>
+				</tr>
+				<tr class="spacer"><td></td></tr>
+				<tr class="spacer"><td></td></tr>
+			</tbody>
+		<table>
+		<div id="status"></div>
+		<script src="options.js"></script>
+  </body>
+</html>
+
+    

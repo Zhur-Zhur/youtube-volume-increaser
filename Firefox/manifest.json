@@ -1,0 +1,30 @@
+{
+  "manifest_version": 2,
+  "name": "Increaser",
+  "version": "1.1.0",
+  "permissions": ["storage"],
+  "browser_action": {
+    "default_icon": "volume.png",
+    "default_title": "Increaser",
+    "default_popup": "options.html"
+  },
+  
+  "description": "Adds a volume multiplier to youtube video controls",
+
+  "icons": {
+    "500": "volume.png"
+  },
+ 
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["increaser.js"]
+    }
+  ],
+  
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "youtube-volume-increaser@Zhur-Zhur.github"
+    }
+  }
+}
