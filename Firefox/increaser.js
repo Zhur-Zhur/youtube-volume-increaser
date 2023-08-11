@@ -55,7 +55,7 @@ function add_increaser(){
 			document.addEventListener("keydown", function(e){
 				if(is_hover){
 					chrome.storage.sync.get(
-						{inc_key: ']', dec_key: '-', stp_val: 0.5 },
+						{inc_key: ']', dec_key: '[', stp_val: 0.5 },
 						(items) => {
 							if(e.key == items.inc_key){
 								new_val = Math.min(8.0, Math.max( 0.0, parseFloat(slider_text.dataset.mult) + items.stp_val));
