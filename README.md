@@ -17,4 +17,4 @@ CHROME VERSION:
 Scroll_up and Scroll_down functionality does not work on CHROME
 
 ![img_1](img_1.png)
-![img_1](img_2.png)
+![img_2](img_2.png)
