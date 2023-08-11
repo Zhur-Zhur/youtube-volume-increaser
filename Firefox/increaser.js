@@ -55,16 +55,16 @@ function add_increaser(){
 			document.addEventListener("keydown", function(e){
 				if(is_hover){
 					chrome.storage.sync.get(
-						{inc_key: ']', dec_key: '[', stp_val: 0.5 },
+						{inc_key: ']', dec_key: '-', stp_val: 0.5 },
 						(items) => {
 							if(e.key == items.inc_key){
-								new_val = Math.max(	0.0, parseFloat(slider_text.dataset.mult) + items.stp_val);
+								new_val = Math.min(8.0, Math.max( 0.0, parseFloat(slider_text.dataset.mult) + items.stp_val));
 								slider_text.innerHTML = new_val.toFixed(1);
 								slider_text.dataset.mult = new_val;
 								gainNode.gain.value = new_val;
 							}
 							if(e.key == items.dec_key){
-								new_val = Math.max(	0.0, parseFloat(slider_text.dataset.mult) - items.stp_val);
+								new_val = Math.min(8.0, Math.max(	0.0, parseFloat(slider_text.dataset.mult) - items.stp_val));
 								slider_text.innerHTML = new_val.toFixed(1);
 								slider_text.dataset.mult = new_val;
 								gainNode.gain.value = new_val;
@@ -89,7 +89,7 @@ function add_increaser(){
 				chrome.storage.sync.get(
 					{stp_val: 0.5 },
 					(items) => {
-						new_val = Math.max(	0.0, parseFloat(e.target.dataset.mult) + Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)))*items.stp_val);
+						new_val = Math.min(8.0, Math.max(	0.0, parseFloat(e.target.dataset.mult) + Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)))*items.stp_val));
 						e.target.innerHTML = new_val.toFixed(1);
 						e.target.dataset.mult = new_val;
 						gainNode.gain.value = new_val;
