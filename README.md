@@ -13,6 +13,8 @@ Max Multiplier: 8<br>
 <br>
 Keybinds and step value can be changed in extension toolbar menu.<br>
 <br>
+.xpi file can be used to install for firefox (in Firefox folder)<br>
+<br>
 CHROME VERSION:<br>
 Scroll_up and Scroll_down functionality does not work on CHROME<br>
 <br>
