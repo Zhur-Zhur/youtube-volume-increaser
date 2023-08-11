@@ -15,8 +15,5 @@ Keybinds and step value can be changed in extension toolbar menu.<br>
 <br>
 .xpi file can be used to install for firefox (in Firefox folder)<br>
 <br>
-CHROME VERSION:<br>
-Scroll_up and Scroll_down functionality does not work on CHROME<br>
-<br>
 ![img_1](img_1.png)<br>
 ![img_2](img_2.png)
